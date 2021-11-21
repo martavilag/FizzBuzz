@@ -24,5 +24,16 @@ namespace FizzBuzz.Tests
             //Assert
             Assert.Equal("2", result);
         }
+
+        [Fact]
+        public void ThreeReturnsFizz()
+        {
+            //Arrange and Act
+            string result = FizzBuzzChecker.FizzBuzz(3);
+
+            //Assert
+            Assert.Equal("Fizz", result);
+        }
+
     }
 }
