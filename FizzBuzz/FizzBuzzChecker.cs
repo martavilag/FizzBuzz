@@ -16,6 +16,11 @@ namespace FizzBuzz
                 return "2";
             }
 
+            if (number == 4)
+            {
+                return "4";
+            }
+
             return "Fizz";
         }
     }
