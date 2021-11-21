@@ -8,8 +8,10 @@ namespace FizzBuzz.Tests
         [Fact]
         public void OneReturnsString()
         {
-            string result = FizzBuzzChecker.FizzBuzz();
+            //Arrange and Act
+            string result = FizzBuzzChecker.FizzBuzz(1);
 
+            //Assert
             Assert.Equal("1", result);
         }
     }

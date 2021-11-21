@@ -6,7 +6,7 @@ namespace FizzBuzz
     {
         public static string FizzBuzz(int number)
         {
-            throw new System.NotImplementedException();
+            return "1";
         }
     }
 }
