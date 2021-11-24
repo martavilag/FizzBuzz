@@ -57,5 +57,15 @@ namespace FizzBuzz.Tests
             Assert.Equal("Buzz", result);
         }
 
+        [Fact]
+        public void FifteenReturnsFizzBuzz()
+        {
+            //Arrange and Act
+            string result = FizzBuzzChecker.FizzBuzz(15);
+
+            //Assert
+            Assert.Equal("FizzBuzz", result);
+        }
+
     }
 }
