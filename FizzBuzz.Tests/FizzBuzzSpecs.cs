@@ -25,6 +25,7 @@ namespace FizzBuzz.Tests
         [InlineData(3, "Fizz")]
         [InlineData(6, "Fizz")]
         [InlineData(9, "Fizz")]
+        [InlineData(12, "Fizz")]
         public void ANumberMultipleOfThreeReturnsStringFizz(int number, string expected)
         {
             //Arrange and Act
