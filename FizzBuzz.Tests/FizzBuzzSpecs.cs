@@ -41,24 +41,17 @@ namespace FizzBuzz.Tests
             Assert.Equal(expected, actual);
         }
 
-        [Fact]
-        public void FiveReturnsBuzz()
+        [Theory]
+        [InlineData(5, "Buzz")]
+        [InlineData(10, "Buzz")]
+        [InlineData(20, "Buzz")]
+        public void ANumberMultipleOfFiveReturnsStringBuzz(int number, string expected)
         {
             //Arrange and Act
-            string result = FizzBuzzChecker.FizzBuzz(5);
+            string actual = FizzBuzzChecker.FizzBuzz(number);
 
             //Assert
-            Assert.Equal("Buzz", result);
-        }
-
-        [Fact]
-        public void TenReturnsBuzz()
-        {
-            //Arrange and Act
-            string result = FizzBuzzChecker.FizzBuzz(10);
-
-            //Assert
-            Assert.Equal("Buzz", result);
+            Assert.Equal(expected, actual);
         }
 
         [Fact]
@@ -69,16 +62,6 @@ namespace FizzBuzz.Tests
 
             //Assert
             Assert.Equal("FizzBuzz", result);
-        }
-
-        [Fact]
-        public void TwentyReturnsBuzz()
-        {
-            //Arrange and Act
-            string result = FizzBuzzChecker.FizzBuzz(20);
-
-            //Assert
-            Assert.Equal("Buzz", result);
         }
 
     }
