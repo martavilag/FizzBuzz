@@ -54,34 +54,17 @@ namespace FizzBuzz.Tests
             Assert.Equal(expected, actual);
         }
 
-        [Fact]
-        public void FifteenReturnsFizzBuzz()
+        [Theory]
+        [InlineData(15, "FizzBuzz")]
+        [InlineData(30, "FizzBuzz")]
+        [InlineData(45, "FizzBuzz")]
+        public void ANumberMultipleOfThreeAndFiveReturnsStringFizzBuzz(int number, string expected)
         {
             //Arrange and Act
-            string result = FizzBuzzChecker.FizzBuzz(15);
+            string actual = FizzBuzzChecker.FizzBuzz(number);
 
             //Assert
-            Assert.Equal("FizzBuzz", result);
-        }
-
-        [Fact]
-        public void ThirtyReturnsFizzBuzz()
-        {
-            //Arrange and Act
-            string result = FizzBuzzChecker.FizzBuzz(30);
-
-            //Assert
-            Assert.Equal("FizzBuzz", result);
-        }
-
-        [Fact]
-        public void FourtyfiveReturnsFizzBuzz()
-        {
-            //Arrange and Act
-            string result = FizzBuzzChecker.FizzBuzz(45);
-
-            //Assert
-            Assert.Equal("FizzBuzz", result);
+            Assert.Equal(expected, actual);
         }
 
     }
