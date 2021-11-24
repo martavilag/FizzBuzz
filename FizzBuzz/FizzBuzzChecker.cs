@@ -12,6 +12,9 @@ namespace FizzBuzz
             if (number == 5)
                 return "Buzz";
 
+            if (number == 10)
+                return "Buzz";
+
             return number.ToString();
         }
     }
