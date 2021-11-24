@@ -10,6 +10,7 @@ namespace FizzBuzz.Tests
         [InlineData(2, "2")]
         [InlineData(4, "4")]
         [InlineData(7, "7")]
+        [InlineData(8, "8")]
         public void ANumberReturnsTheSameNumberAsAString(int number, string expected)
         {
             //Arrange and Act
