@@ -6,13 +6,7 @@ namespace FizzBuzz
     {
         public static string FizzBuzz(int number)
         {
-            if (number == 15)
-                return "FizzBuzz";
-
-            if (number == 30)
-                return "FizzBuzz";
-
-            if (number == 45)
+            if (number % 3 == 0 && number % 5 == 0)
                 return "FizzBuzz";
 
             if (number % 3 == 0)
