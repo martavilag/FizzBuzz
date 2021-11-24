@@ -5,24 +5,18 @@ namespace FizzBuzz.Tests
 {
     public class FizzBuzzSpecs
     {
-        [Fact]
-        public void OneReturnsOne()
+        [Theory]
+        [InlineData(1,"1")]
+        [InlineData(2, "2")]
+        [InlineData(4, "4")]
+        [InlineData(7, "7")]
+        public void ANumberReturnsTheSameNumberAsAString(int number, string expected)
         {
             //Arrange and Act
-            string result = FizzBuzzChecker.FizzBuzz(1);
+            string actual = FizzBuzzChecker.FizzBuzz(number);
 
             //Assert
-            Assert.Equal("1", result);
-        }
-
-        [Fact]
-        public void TwoReturnsTwo()
-        {
-            //Arrange and Act
-            string result = FizzBuzzChecker.FizzBuzz(2);
-
-            //Assert
-            Assert.Equal("2", result);
+            Assert.Equal(expected, actual);
         }
 
         [Fact]
@@ -35,15 +29,6 @@ namespace FizzBuzz.Tests
             Assert.Equal("Fizz", result);
         }
 
-        [Fact]
-        public void FourReturnsFour()
-        {
-            //Arrange and Act
-            string result = FizzBuzzChecker.FizzBuzz(4);
-
-            //Assert
-            Assert.Equal("4", result);
-        }
 
         [Fact]
         public void FiveReturnsBuzz()
@@ -63,16 +48,6 @@ namespace FizzBuzz.Tests
 
             //Assert
             Assert.Equal("Fizz", result);
-        }
-
-        [Fact]
-        public void SevenReturnsSeven()
-        {
-            //Arrange and Act
-            string result = FizzBuzzChecker.FizzBuzz(7);
-
-            //Assert
-            Assert.Equal("7", result);
         }
 
     }
